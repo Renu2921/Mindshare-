@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form for new post</title>
+    <link rel="stylesheet" href="/form.css">
+</head>
+<body>
+    <div class="nav-container">
+        <h1 class="title">MindShare</h1>
+    </div>
+    <div class="form-div">
+        <h1 class="title">Add Post</h1>
+    <form  method="post" action="/posts">
+        <p class="username">Username</p>
+        <input class="input" type="text" placeholder="Enter Username" name="username"><br>
+        <p class="username">Profession</p>
+        <input class="input" type="text" placeholder="Enter Your Profession" name="profession"><br>
+        <p class="email">Image Url</p>
+        <input class="email-input" type="url" name="image" placeholder="Enter image URL" required><br>
+        <p class="caption">Caption</p>
+        <textarea class="caption-input" name="caption" placeholder="enter caption"></textarea>
+        <br>
+        <button class="btn">Add Post</button>
+    </form>
+</div>
+    
+</body>
+</html>

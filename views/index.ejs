@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>instagram index</title> -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navigation">
+        <div class="nav-container">
+            <h1 class="title">MindShare</h1>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="menu">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="text" placeholder="Search" class="search">
+            </div>
+            <div class="home-main">
+                <i class="fa-regular fa-user"></i>
+                <span>Login</span>
+            </div>
+            <div class="home-main">
+                <i class="fa-sharp fa-solid fa-house"></i>
+                <span>Home</span>
+            </div>
+            <div class="home-main">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+            </div>
+            <div class="home-main">
+                <i class="fa-solid fa-user-group"></i>
+                <span>Help Center</span>
+            </div>
+            <div class="home-main">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <span>What's New</span>
+            </div>
+
+            <div class="home-main">
+                <i class="fa-solid fa-plus"></i>
+                <button><a href="/posts/new">add new post</a></button>
+            </div>
+            <div class="home-main question">
+                <i class="fa-solid fa-question"></i>
+                <button>Add Question</button>
+            </div>
+
+            <hr>
+            <div class="footer">
+                <p>About</p>
+                <p>careers</p>
+                <p>Privacy Policy</p>
+                <p>Your add choices</p>
+
+            </div>
+            <p>&copy;2024 Mindshare.com, Inc or its affiliates</p>
+
+        </div>
+        <div class="post">
+            <div>
+                <%for(let post of posts){ %>
+                    <div class="each-post">
+                        
+                        <h2 class="user"> <%=post.username%>
+                             <span>+Follow</span>
+                        </h2>
+                        <p class="profession"><%=post.profession%></p>
+                    
+                        <p class="user-id"> Id: <%=post.id%>
+                        </p>
+                        <hr>
+                        <!-- <img src="<%=post.image%>" class="image" alt="<%=post.caption%>"> -->
+                        <h3 class="caption">
+                            <%=post.caption%>
+                        </h3>
+                        <img src="<%=post.image%>" class="image" alt="<%=post.caption%>">
+                        <div class="like">
+                            <sapn><i class="fa-regular fa-heart"></i></sapn>
+                            <span><i class="fa-regular fa-comment"></i></span>
+                            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+                        </div>
+                        
+                      
+                        <button class="see-detail"><a href="/posts/<%=post.id%>">See in Detail</a></button>
+                        <button class="edit-post"><a href="/posts/<%=post.id%>/edit">Edit Post</a></button>
+                  
+                    
+                        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                            <button class="delete">Delete Post</button>
+                        </form>
+                    
+                        
+                    </div>
+                    <% }%>
+                        <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

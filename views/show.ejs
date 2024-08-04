@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows full details</title>
+    <link rel="stylesheet" href="/show.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="nav-container">
+        <h1 class="title">MindShare</h1>
+    </div>
+    <h2 class="heading">Here is your post in Detail</h2>
+
+    <div class="main-div">
+        <h2 class="user"> @<%=post.username%><span>+Follow</span>
+        </h2>
+        
+        <p class="profession"><%=post.profession%></p>
+        <p class="main-id"> Id: <%=post.id%>
+        </p>
+        <hr>
+        <h3 class="caption">
+            <%=post.caption%>
+        </h3>
+        <img src="<%=post.image%>" class="image" alt="<%=post.caption%>">
+        <div class="like">
+            <sapn><i class="fa-regular fa-heart"></i></sapn>
+            <span><i class="fa-regular fa-comment"></i></span>
+            <span><i class="fa-solid fa-arrow-up-from-bracket"></i></span>
+        </div>
+        <form  class=back-to-home action="/posts"> <button>Back to Home</button></form>
+    </div>
+    
+  
+</body>
+
+</html>

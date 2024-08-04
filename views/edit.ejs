@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the Post Data</title>
+    <link rel="stylesheet" href="/edit.css">
+</head>
+<body>
+    <div class="nav-container">
+        <h1 class="title">MindShare</h1>
+    </div>
+    
+    <div class="edit-form">
+        <h2 class="heading">Edit  Post Data</h2>
+    
+<p class="username">Username:<%=post.username%></p>
+<p class="post-id">Post id:<%=post.id%></p>
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+   <textarea rows="14" name="caption"><%=post.caption%></textarea>
+   <br>
+   <button>Submit</button>
+    </form>
+</div>
+</body>
+</html>

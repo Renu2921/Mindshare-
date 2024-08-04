@@ -1,0 +1,62 @@
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color:white;
+    color: #b12b2b;
+    height: 50px;
+    box-shadow: 0 2px 4px black;
+    margin-bottom:20px;
+   
+}
+.heading{
+    color: #b12b2b;
+    font-size: 34px ;
+   font-weight: 100;
+   margin-bottom: 20px;
+   font-weight: 600;
+   
+    }
+
+.edit-form{
+border: 2px solid #d2d2d2;
+width: 450px;
+height: 500px;
+margin: 70px auto;
+padding: 0 10px 0 10px;
+border-radius: 5px;
+
+}
+.post-id{
+    position: relative;
+    bottom: 16px;
+   color:grey;
+   font-size: 13px;
+   /* box-shadow: 0 2px 4px black; */
+}
+.username{
+    /* text-align: center; */
+    color: black;
+    font-size: 20px;
+   /* box-shadow: 0 2px 4px black;
+    background-color: white; */
+}
+
+form textarea{
+    
+    width: 100%;
+    background-color: white;
+    font-size: 15px;
+    color: rgb(14, 14, 14);
+}
+button{
+    width: 100%;
+    border: none;
+    padding: 10px 6px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #b12b2b;
+    color: white;
+}
